@@ -1,0 +1,70 @@
+<launch>
+    <!-- ========================= CLI Arguments ========================= -->
+    <!-- Check if testing on route 1 or 2 -->
+
+    <!-- <arg name="route" default="route1" /> -->
+
+
+    <!-- Robot initial pose -->
+    <!-- If Route 1 -->
+    <!-- <arg name="x" default="-30.43" if="$(eval route=='route1')" />
+    <arg name="y" default="-1.17" if="$(eval route=='route1')" />
+    <arg name="z" default="0.373011" if="$(eval route=='route1')" />
+    <arg name="yaw" default="1.57079632679" if="$(eval route=='route1')" /> -->
+
+    <!-- If Route 2 -->
+    <!-- <arg name="x" value="-30.43" unless="$(eval route=='route1')" />
+    <arg name="y" value="-10.9" unless="$(eval route=='route1')" />
+    <arg name="z" value="0.373011" unless="$(eval route=='route1')" />
+    <arg name="yaw" value="0" unless="$(eval route=='route1')" /> -->
+
+    <!-- Gazebo World file to load -->
+    <arg name="world_name" default="$(find parc_robot)/worlds/task1.world" />
+    <!-- <arg name="world_name" default="$(find parc_robot)/worlds/test.world" /> -->
+
+    <!-- ========================= Robot Model ========================= -->
+    <!-- Load URDF -->
+    <param name="robot_description" command="$(find xacro)/xacro '$(find parc_robot)/urdf/robot.xacro'" />
+
+    <!-- Generate TF from URDF -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <!-- ========================= Simulator ========================= -->
+    <!-- Start Gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_name)" />
+        <arg name="paused" value="false" />
+        <arg name="use_sim_time" value="true" />
+        <arg name="gui" value="true" />
+        <arg name="headless" value="false" />
+        <arg name="debug" value="false" />
+    </include>
+
+    <!-- Spawn Robot model in Gazebo -->
+    <node name="spawn_robot_model" pkg="gazebo_ros" type="spawn_model" args="
+                  -unpause
+                  -urdf
+                  -param robot_description
+                  -model 'robot'" />
+    
+    <!-- <node name="spawn_robot_model" pkg="gazebo_ros" type="spawn_model" args="-x $(arg x)
+                  -y $(arg y)
+                  -z $(arg z)
+                  -Y $(arg yaw)
+                  -unpause
+                  -urdf
+                  -param robot_description
+                  -model 'robot'" /> -->
+
+    <!-- Show Goal Location in Gazebo -->
+    <!-- <node name="spawn_goal_location" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-file $(find parc-robot)/models/goal_location/model.sdf -sdf 
+                  -model goal_location
+                  -x     -12.32
+                  -y      10.9
+                  -z       0.1" /> -->
+
+    <!-- ========================= Vizualize ========================= -->
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find parc-robot)/rviz/task1.rviz" /> -->
+</launch>

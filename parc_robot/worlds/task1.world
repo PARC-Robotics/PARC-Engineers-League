@@ -1,0 +1,175 @@
+<?xml version='1.0'?>
+<!-- Seed: 1023 -->
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic' />
+
+    <physics name='default_physics' default='0' type='ode'>
+      <dart>
+        <collision_detector>bullet</collision_detector>
+      </dart>
+      <max_step_size>0.005</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>200</real_time_update_rate>
+    </physics>
+
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <grid>false</grid>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind />
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>0</sim_time>
+      <real_time>0</real_time>
+      <wall_time>0</wall_time>
+      <iterations>0</iterations>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    
+    <include>
+      <uri>model://runway</uri>
+      <pose>0 20 0.123 0 0 1.571428571</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://pickup</uri>
+      <pose>-4 12 0 0 0 1.5714</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://pine_tree</uri>
+      <pose>-0.5 14 0 0 0 0</pose>
+      <name>pine_tree_00</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://pine_tree</uri>
+      <pose>1.0 14 0 0 0 0</pose>
+      <name>pine_tree_01</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://pine_tree</uri>
+      <pose>2.5 14 0 0 0 0</pose>
+      <name>pine_tree_02</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://pine_tree</uri>
+      <pose>4.0 14 0 0 0 0</pose>
+      <name>pine_tree_03</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://pine_tree</uri>
+      <pose>5.5 14 0 0 0 0</pose>
+      <name>pine_tree_04</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://oak_tree</uri>
+      <pose>-8 -6 0 0 0 0</pose>
+      <name>oak_tree_01</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://carrot_farm</uri>
+      <pose>0 0 0 0 0 0</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://parc_grassland</uri>
+      <pose>0 0 0.11 0 0 0</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://wooden_pega</uri>
+      <pose>0 7.5 0 0 0 0</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://guide</uri>
+      <pose>0 25.1 0.2 0 0 1.571428571</pose>
+      <name>guide_01</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://guide</uri>
+      <pose>0 14.9 0.2 0 0 1.571428571</pose>
+      <name>guide_02</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://barn</uri>
+      <pose>-19 8 0.3 0 0 0</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <pose>-3 3 0.13 0 0 0</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://coke_can</uri>
+      <pose>2.5 0 0.3 0 0 1.571428571</pose>
+      <static>false</static>
+    </include>
+    
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>5.45099 -4.71679 1.58055 0 0.275643 2.35619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
