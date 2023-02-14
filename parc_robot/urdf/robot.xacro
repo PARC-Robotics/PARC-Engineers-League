@@ -68,7 +68,7 @@
     </joint>
 
     <!-- Scout wheel macros -->
-    <!-- wheel labeled from 0 to 3, conter-clockwise, starting from front right wheel -->
+    <!-- wheel labeled from 0 to 3, counter-clockwise, starting from front right wheel -->
     <!-- motor 1 and 2 (left side) are mechanically installed in a reversed direction -->
     <xacro:scout_wheel_type1 wheel_prefix="front_right">
         <origin xyz="${wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="3.14 0 0" />
@@ -85,6 +85,7 @@
 
     <!-- Sensor definitions -->
     <xacro:include filename="$(find parc_robot)/urdf/sensors.xacro" />
+    <xacro:include filename="$(find parc_robot)/urdf/attachment.xacro" />
 
     <!-- Gazebo definitions -->
     <xacro:include filename="$(find parc_robot)/urdf/robot_gazebo.xacro" />

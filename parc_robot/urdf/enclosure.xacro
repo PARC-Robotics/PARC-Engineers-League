@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot name="robot_enclosure" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="enclosure" params="parent *origin name:=enclosure">
+    <!-- Joints and Links, standard URDF stuff -->
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="-0.00029774 0.0066667 0.00013047" rpy="0 0 0" />
+        <mass value="0.15717" />
+        <inertia ixx="6.7885E-05" ixy="-1.3987E-07" ixz="-8.1554E-07" iyy="0.00013173" iyz="-9.0932E-08" izz="7.1972E-05" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://parc_robot/meshes/enclosure.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+        <material name="">
+          <color rgba="0.64706 0.61961 0.58824 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://parc_robot/meshes/enclosure.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent}" />
+      <child link="${name}_link" />
+    </joint>
+  </xacro:macro>
+</robot>

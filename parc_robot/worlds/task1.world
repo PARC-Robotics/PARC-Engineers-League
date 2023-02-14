@@ -62,54 +62,54 @@
     
     <include>
       <uri>model://runway</uri>
-      <pose>0 20 0.123 0 0 1.571428571</pose>
+      <pose>0 50 0.123 0 0 1.571428571</pose>
       <static>true</static>
     </include>
 
     <include>
       <uri>model://pickup</uri>
-      <pose>-4 12 0 0 0 1.5714</pose>
+      <pose>-4 17 0 0 0 1.5714</pose>
       <static>true</static>
     </include>
 
     <include>
       <uri>model://pine_tree</uri>
-      <pose>-0.5 14 0 0 0 0</pose>
+      <pose>-0.5 19 0 0 0 0</pose>
       <name>pine_tree_00</name>
       <static>true</static>
     </include>
 
     <include>
       <uri>model://pine_tree</uri>
-      <pose>1.0 14 0 0 0 0</pose>
+      <pose>1.0 19 0 0 0 0</pose>
       <name>pine_tree_01</name>
       <static>true</static>
     </include>
 
     <include>
       <uri>model://pine_tree</uri>
-      <pose>2.5 14 0 0 0 0</pose>
+      <pose>2.5 19 0 0 0 0</pose>
       <name>pine_tree_02</name>
       <static>true</static>
     </include>
 
     <include>
       <uri>model://pine_tree</uri>
-      <pose>4.0 14 0 0 0 0</pose>
+      <pose>4.0 19 0 0 0 0</pose>
       <name>pine_tree_03</name>
       <static>true</static>
     </include>
 
     <include>
       <uri>model://pine_tree</uri>
-      <pose>5.5 14 0 0 0 0</pose>
+      <pose>5.5 19 0 0 0 0</pose>
       <name>pine_tree_04</name>
       <static>true</static>
     </include>
 
     <include>
       <uri>model://oak_tree</uri>
-      <pose>-8 -6 0 0 0 0</pose>
+      <pose>-12 -6 0 0 0 0</pose>
       <name>oak_tree_01</name>
       <static>true</static>
     </include>
@@ -120,17 +120,17 @@
       <static>true</static>
     </include>
 
-    <include>
+    <!-- <include>
       <uri>model://parc_grassland</uri>
       <pose>0 0 0.11 0 0 0</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
-    <include>
+    <!-- <include>
       <uri>model://wooden_pega</uri>
       <pose>0 7.5 0 0 0 0</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
     <include>
       <uri>model://guide</uri>
@@ -148,21 +148,29 @@
 
     <include>
       <uri>model://barn</uri>
-      <pose>-19 8 0.3 0 0 0</pose>
+      <pose>-29 8 0.3 0 0 0</pose>
+      <name>barn_00</name>
       <static>true</static>
     </include>
 
     <include>
+      <uri>model://barn</uri>
+      <pose>29 -12 0.3 0 0 -1.571428571</pose>
+      <name>barn_02</name>
+      <static>true</static>
+    </include>
+
+    <!-- <include>
       <uri>model://person_standing</uri>
       <pose>-3 3 0.13 0 0 0</pose>
       <static>true</static>
-    </include>
+    </include> -->
 
-    <include>
+    <!-- <include>
       <uri>model://coke_can</uri>
       <pose>2.5 0 0.3 0 0 1.571428571</pose>
       <static>false</static>
-    </include>
+    </include> -->
     
     <gui fullscreen='0'>
       <camera name='user_camera'>

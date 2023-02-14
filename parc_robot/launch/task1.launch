@@ -42,12 +42,14 @@
         <arg name="debug" value="false" />
     </include>
 
+    <rosparam command="load" file="$(find parc_robot)/config/pid_gains.yaml"/>
+
     <!-- Spawn Robot model in Gazebo -->
     <node name="spawn_robot_model" pkg="gazebo_ros" type="spawn_model" args="
                   -unpause
                   -urdf
                   -param robot_description
-                  -model 'robot'" />
+                  -model 'scout_v2'" />
     
     <!-- <node name="spawn_robot_model" pkg="gazebo_ros" type="spawn_model" args="-x $(arg x)
                   -y $(arg y)
