@@ -6,7 +6,7 @@
 
   <!-- enclosure -->
   <xacro:enclosure parent="base_link">
-    <origin xyz="0.7 0 0" rpy="0 0 0" />
+    <origin xyz="0.7 0 -0.21" rpy="0 0 0" />
   </xacro:enclosure>
 
 </robot>

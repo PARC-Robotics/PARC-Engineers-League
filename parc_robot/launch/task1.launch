@@ -20,7 +20,7 @@
 
     <!-- Gazebo World file to load -->
     <arg name="world_name" default="$(find parc_robot)/worlds/task1.world" />
-    <!-- <arg name="world_name" default="$(find parc_robot)/worlds/test.world" /> -->
+    <!-- <arg name="world_name" default="$(find parc_robot)/worlds/parc_task1.world" /> -->
 
     <!-- ========================= Robot Model ========================= -->
     <!-- Load URDF -->
