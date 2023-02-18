@@ -7,15 +7,14 @@
 
     <!-- Robot initial pose -->
     <!-- If Route 1 -->
-    <arg name="x" default="4.813540" if="$(eval route=='route1')" />
-    <arg name="y" default="-1.610954" if="$(eval route=='route1')" />
-    <arg name="z" default="0.515845" if="$(eval route=='route1')" />
-    <arg name="yaw" default="-3.083520" if="$(eval route=='route1')" />
+    <arg name="x" default="5.853562" if="$(eval route=='route1')" />
+    <arg name="y" default="-2.120167" if="$(eval route=='route1')" />
+    <arg name="z" default="0.538968" if="$(eval route=='route1')" />
+    <arg name="yaw" default="-3.142857" if="$(eval route=='route1')" />
     <!-- Route 1 Goal Location -->
-    <arg name="goal_x" default="-6.084383" if="$(eval route=='route1')" />
-    <arg name="goal_y" default="-9.451681" if="$(eval route=='route1')" />
+    <arg name="goal_x" default="-6.786472" if="$(eval route=='route1')" />
+    <arg name="goal_y" default="-6.524966" if="$(eval route=='route1')" />
     <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" />
-
 
     <!-- If Route 2 -->
     <arg name="x" value="-4" unless="$(eval route=='route1')" />

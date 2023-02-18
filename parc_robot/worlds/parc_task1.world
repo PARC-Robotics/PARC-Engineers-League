@@ -108,7 +108,7 @@
       <shadows>1</shadows>
     </scene>
     
-    <!-- <include>
+    <include>
       <uri>model://runway</uri>
       <pose>0 9.15 0.05 0 0 1.571428571</pose>
       <static>true</static>
@@ -160,7 +160,7 @@
       <pose>-11 -12 0 0 0 0</pose>
       <name>oak_tree_01</name>
       <static>true</static>
-    </include> -->
+    </include>
 
     <include>
       <uri>model://farmland</uri>
@@ -174,7 +174,7 @@
       <static>true</static>
     </include>
 
-    <!-- <include>
+    <include>
       <uri>model://guide</uri>
       <pose>0 5.5 0.1 0 0 1.571428571</pose>
       <name>guide_01</name>
@@ -228,9 +228,9 @@
       <pose>-40 -31 0.3 0 0 1.571428571</pose>
       <name>barn_05</name>
       <static>true</static>
-    </include> -->
+    </include>
 
-    <!-- <include>
+    <include>
       <uri>model://lamp_post</uri>
       <pose>0 13 0 0 0 0</pose>
       <name>lamp_post_00</name>
@@ -249,7 +249,7 @@
       <pose>-40 13 0 0 0 0</pose>
       <name>lamp_post_02</name>
       <static>true</static>
-    </include> -->
+    </include>
 
     <include>
       <uri>model://lettuce_crop_02</uri>
@@ -1928,412 +1928,6 @@
       <uri>model://lettuce_crop_01</uri>
       <pose>-5.98595 -7.72815 0.3785 0 0 4.50013</pose>
       <name>lettuce_239</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>5.5185 -1.11113 0.05 0 0 -0.0226055</pose>
-      <name>unknown_weed_0</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>4.74798 -1.09108 0.05 0 0 0.697206</pose>
-      <name>unknown_weed_1</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>4.46631 -1.18767 0.05 0 0 -5.88819</pose>
-      <name>unknown_weed_2</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>4.08687 -1.21897 0.05 0 0 -0.864342</pose>
-      <name>unknown_weed_3</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>3.63843 -1.35235 0.05 0 0 -1.77113</pose>
-      <name>unknown_weed_4</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>2.8423 -1.29293 0.05 0 0 -0.00686803</pose>
-      <name>unknown_weed_5</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>1.95567 -1.53324 0.05 0 0 4.36568</pose>
-      <name>unknown_weed_6</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>0.758857 -1.54707 0.05 0 0 5.16227</pose>
-      <name>unknown_weed_7</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-0.0113625 -1.60368 0.05 0 0 2.99749</pose>
-      <name>unknown_weed_8</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-1.55238 -1.6296 0.05 0 0 -4.93915</pose>
-      <name>unknown_weed_9</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-2.30683 -1.56366 0.05 0 0 -3.66412</pose>
-      <name>unknown_weed_10</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-2.78348 -1.64836 0.05 0 0 2.37052</pose>
-      <name>unknown_weed_11</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-3.10785 -1.6195 0.05 0 0 -4.69185</pose>
-      <name>unknown_weed_12</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-4.08422 -1.48588 0.05 0 0 0.362041</pose>
-      <name>unknown_weed_13</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-4.30469 -1.59901 0.05 0 0 4.55054</pose>
-      <name>unknown_weed_14</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-5.15603 -1.36828 0.05 0 0 -5.04825</pose>
-      <name>unknown_weed_15</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-5.92798 -1.4289 0.05 0 0 4.39554</pose>
-      <name>unknown_weed_16</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>5.52855 -3.15067 0.05 0 0 -4.53095</pose>
-      <name>unknown_weed_17</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>5.24083 -3.14401 0.05 0 0 2.34352</pose>
-      <name>unknown_weed_18</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>4.47912 -3.12145 0.05 0 0 1.15751</pose>
-      <name>unknown_weed_19</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>3.6459 -3.31971 0.05 0 0 -5.05305</pose>
-      <name>unknown_weed_20</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>3.1077 -3.36989 0.05 0 0 4.88905</pose>
-      <name>unknown_weed_21</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>2.34367 -3.46803 0.05 0 0 4.79671</pose>
-      <name>unknown_weed_22</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>2.05136 -3.51257 0.05 0 0 -4.55149</pose>
-      <name>unknown_weed_23</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>0.873251 -3.60121 0.05 0 0 3.60875</pose>
-      <name>unknown_weed_24</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>0.0829595 -3.61589 0.05 0 0 -4.50744</pose>
-      <name>unknown_weed_25</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-0.310955 -3.65352 0.05 0 0 5.9068</pose>
-      <name>unknown_weed_26</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-0.729496 -3.63733 0.05 0 0 0.178805</pose>
-      <name>unknown_weed_27</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-1.67375 -3.64459 0.05 0 0 -4.34821</pose>
-      <name>unknown_weed_28</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-2.34776 -3.5515 0.05 0 0 -3.62726</pose>
-      <name>unknown_weed_29</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-3.29313 -3.48826 0.05 0 0 -3.44055</pose>
-      <name>unknown_weed_30</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-4.37593 -3.54403 0.05 0 0 5.10474</pose>
-      <name>unknown_weed_31</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-4.82455 -3.56608 0.05 0 0 2.91093</pose>
-      <name>unknown_weed_32</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-5.11357 -3.50819 0.05 0 0 4.16503</pose>
-      <name>unknown_weed_33</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-5.69107 -3.37708 0.05 0 0 4.8806</pose>
-      <name>unknown_weed_34</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>3.60498 -5.34348 0.05 0 0 5.78035</pose>
-      <name>unknown_weed_35</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>3.25295 -5.28549 0.05 0 0 -4.84788</pose>
-      <name>unknown_weed_36</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>1.18376 -5.47767 0.05 0 0 6.02869</pose>
-      <name>unknown_weed_37</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>0.310554 -5.57013 0.05 0 0 5.8839</pose>
-      <name>unknown_weed_38</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-0.0895408 -5.56374 0.05 0 0 -0.0141505</pose>
-      <name>unknown_weed_39</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-2.01164 -5.64667 0.05 0 0 -0.223544</pose>
-      <name>unknown_weed_40</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-2.48223 -5.67866 0.05 0 0 2.41009</pose>
-      <name>unknown_weed_41</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-3.21574 -5.49737 0.05 0 0 3.01066</pose>
-      <name>unknown_weed_42</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-3.51877 -5.50848 0.05 0 0 2.60191</pose>
-      <name>unknown_weed_43</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-4.47528 -5.45368 0.05 0 0 -5.41811</pose>
-      <name>unknown_weed_44</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-5.90098 -5.38226 0.05 0 0 -1.48103</pose>
-      <name>unknown_weed_45</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>5.24461 -7.10486 0.05 0 0 0.0312908</pose>
-      <name>unknown_weed_46</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>4.81694 -7.23391 0.05 0 0 1.66025</pose>
-      <name>unknown_weed_47</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>2.38142 -7.47775 0.05 0 0 3.098</pose>
-      <name>unknown_weed_48</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>1.60736 -7.53873 0.05 0 0 -3.35761</pose>
-      <name>unknown_weed_49</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>0.720565 -7.5407 0.05 0 0 -3.08933</pose>
-      <name>unknown_weed_50</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>0.436454 -7.64783 0.05 0 0 2.7052</pose>
-      <name>unknown_weed_51</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-0.301911 -7.57409 0.05 0 0 5.36754</pose>
-      <name>unknown_weed_52</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-1.1836 -7.63356 0.05 0 0 4.76691</pose>
-      <name>unknown_weed_53</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-2.472 -7.56878 0.05 0 0 -5.63193</pose>
-      <name>unknown_weed_54</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-3.25699 -7.60884 0.05 0 0 -4.2626</pose>
-      <name>unknown_weed_55</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-4.85113 -7.38739 0.05 0 0 4.97557</pose>
-      <name>unknown_weed_56</name>
-      <static>false</static>
-    </include>
-
-    <include>
-      <uri>model://unknown_weed</uri>
-      <pose>-6.08045 -7.50134 0.05 0 0 0.864875</pose>
-      <name>unknown_weed_57</name>
       <static>false</static>
     </include>
 
