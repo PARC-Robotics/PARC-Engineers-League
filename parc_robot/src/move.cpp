@@ -12,16 +12,19 @@ class Move
             pub = nh.advertise<geometry_msgs::Twist>("cmd_vel", 10);
             while(ros::ok()) // Keep running this code while ros is running
             {
-                for(int i = 0; i < 10000; i++){
-                    speed.linear.x = 0.5;
-                    pub.publish(speed);
-                    rate.sleep();
-                }
-                for(int i = 0; i < 10000; i++){
-                    speed.linear.x = -0.5;
-                    pub.publish(speed);
-                    rate.sleep();
-                }
+                speed.angular.x = -0.5;
+                pub.publish(speed);
+                rate.sleep();
+                // for(int i = 0; i < 10000; i++){
+                //     speed.angular.x = 0.5;
+                //     pub.publish(speed);
+                //     rate.sleep();
+                // }
+                // for(int i = 0; i < 10000; i++){
+                //     speed.linear.x = -0.5;
+                //     pub.publish(speed);
+                //     rate.sleep();
+                // }
             }
         }
     private:

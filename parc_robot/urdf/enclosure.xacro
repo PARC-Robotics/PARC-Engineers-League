@@ -13,9 +13,9 @@
         <geometry>
           <mesh filename="package://parc_robot/meshes/enclosure.stl" scale="0.001 0.001 0.001" />
         </geometry>
-        <!-- <material name="">
+        <material name="">
           <color rgba="0.64706 0.61961 0.58824 1" />
-        </material> -->
+        </material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />

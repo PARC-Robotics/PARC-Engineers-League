@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="baseline" value="0.12"/>
+
+  <xacro:macro name="left_side_camera" params="parent *origin">
+
+    <!-- Left Side Camera -->
+    <link name="left_camera">
+      <inertial>
+        <mass value="0.16140"/>
+        <origin xyz="0 0 0"/>
+        <inertia
+          ixx="0.0003947" ixy="0.0" ixz="3.3365e-8"
+          iyy="2.417e-5" iyz="0.0"
+          izz="0.0003973"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://parc_robot/meshes/ZED2.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://parc_robot/meshes/ZED2.dae"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Left Camera Joint -->
+    <joint name="left_camera_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent}" />
+      <child link="left_camera" />
+    </joint>
+
+    <!-- Left Camera Gazebo -->
+    <gazebo reference="left_camera">
+      <sensor type="camera" name="left_camera">
+        <always_on>true</always_on>
+        <update_rate>30.0</update_rate>
+        <visualize>false</visualize> 
+        <camera name="left_camera">
+          <horizontal_fov>1.9</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.02</near>
+            <far>300</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+          <distortion>
+            <k1>-0.279817</k1>
+            <k2>0.060321</k2>
+            <k3>0.000487</k3>
+            <p1>0.000310</p1>
+            <p2>0.000000</p2>
+            <center>0.5 0.5</center>
+          </distortion>
+        </camera>
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+          <!-- <robotNamespace>${robot_ns}</robotNamespace> -->
+          <cameraName>left_camera</cameraName>
+          <imageTopicName>image_raw</imageTopicName>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+          <frameName>camera_optical_frame</frameName>
+          <distortionK1>-0.279817</distortionK1>
+          <distortionK2>0.060321</distortionK2>
+          <distortionK3>0.000487</distortionK3>
+          <distortionT1>0.000310</distortionT1>
+          <distortionT2>0.000000</distortionT2>
+        </plugin>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="right_side_camera" params="parent *origin">
+    <!-- Right Side Camera -->
+    <link name="right_camera">
+      <inertial>
+        <mass value="0.16140"/>
+        <origin xyz="0 0 0"/>
+        <inertia
+          ixx="0.0003947" ixy="0.0" ixz="3.3365e-8"
+          iyy="2.417e-5" iyz="0.0"
+          izz="0.0003973"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://parc_robot/meshes/ZED2.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://parc_robot/meshes/ZED2.dae"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Right Camera Joint -->
+    <joint name="right_camera_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent}" />
+      <child link="right_camera" />
+    </joint>
+
+    <!-- Right Camera Gazebo -->
+    <gazebo reference="right_camera">
+      <sensor type="camera" name="right_camera">
+        <always_on>true</always_on>
+        <update_rate>30.0</update_rate>
+        <visualize>false</visualize> 
+        <camera name="right_camera">
+          <horizontal_fov>1.9</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.02</near>
+            <far>300</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+          <distortion>
+            <k1>-0.279817</k1>
+            <k2>0.060321</k2>
+            <k3>0.000487</k3>
+            <p1>0.000310</p1>
+            <p2>0.000000</p2>
+            <center>0.5 0.5</center>
+          </distortion>
+        </camera>
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+          <!-- <robotNamespace>${robot_ns}</robotNamespace> -->
+          <cameraName>right_camera</cameraName>
+          <imageTopicName>image_raw</imageTopicName>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+          <frameName>camera_optical_frame</frameName>
+          <distortionK1>-0.279817</distortionK1>
+          <distortionK2>0.060321</distortionK2>
+          <distortionK3>0.000487</distortionK3>
+          <distortionT1>0.000310</distortionT1>
+          <distortionT2>0.000000</distortionT2>
+        </plugin>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+</robot>

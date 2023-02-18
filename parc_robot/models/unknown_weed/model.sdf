@@ -19,6 +19,7 @@
         <geometry>
           <mesh>
             <uri>model://unknown_weed/meshes/unknown_weed.dae</uri>
+            <scale>2 2 2</scale>
           </mesh>
         </geometry>
         <max_contacts>10</max_contacts>
@@ -61,6 +62,7 @@
         <geometry>
           <mesh>
             <uri>model://unknown_weed/meshes/unknown_weed.dae</uri>
+            <scale>2 2 2</scale>
           </mesh>
         </geometry>
         <material>

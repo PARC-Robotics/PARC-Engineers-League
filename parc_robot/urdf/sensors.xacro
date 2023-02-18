@@ -4,6 +4,8 @@
   <!-- Includes -->
   <xacro:include filename="$(find parc_robot)/urdf/ydlidar.xacro" />
   <xacro:include filename="$(find parc_robot)/urdf/zed2.xacro" />
+  <xacro:include filename="$(find parc_robot)/urdf/gps.xacro" />
+  <xacro:include filename="$(find parc_robot)/urdf/side_cameras.xacro" />
 
   <!-- ydlidar -->
   <xacro:ydlidar_sensor parent="base_link">
@@ -15,5 +17,20 @@
   <xacro:zed2 parent="base_link">
     <origin xyz="0.36 0 0.11" rpy="0 0 0"/>
   </xacro:zed2>
+
+  <!-- gps -->
+  <xacro:gps_sensor parent="base_link">
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+  </xacro:gps_sensor>
+
+  <!-- left_side_camera -->
+  <xacro:left_side_camera parent="base_link">
+    <origin xyz="0 0.5 0.7" rpy="0 1.0472 1.571428571"/>
+  </xacro:left_side_camera>
+
+    <!-- right_side_camera -->
+  <xacro:right_side_camera parent="base_link">
+    <origin xyz="0 -0.5 0.7" rpy="0 2.0944 1.571428571"/>
+  </xacro:right_side_camera>
 
 </robot>

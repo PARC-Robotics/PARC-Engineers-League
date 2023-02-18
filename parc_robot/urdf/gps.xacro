@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<robot name="gps" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="gps_sensor" params="parent *origin name:=gps">
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="-0.00029774 0.0066667 0.00013047" rpy="0 0 0" />
+        <mass value="0.15717" />
+        <inertia ixx="6.7885E-05" ixy="-1.3987E-07" ixz="-8.1554E-07" iyy="0.00013173" iyz="-9.0932E-08" izz="7.1972E-05" />
+      </inertial>
+    </link>
+
+    <joint name="${name}_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent}" />
+      <child link="${name}_link" />
+    </joint>
+    
+    <gazebo>
+      <plugin name="gazebo_ros_gps" filename="libhector_gazebo_ros_gps.so">
+        <updateRate>4.0</updateRate>
+        <bodyName>${name}_link</bodyName>
+        <frameId>${name}_link</frameId>
+        <topicName>/gps/fix</topicName>
+        <velocityTopicName>/gps/fix_velocity</velocityTopicName>
+        <referenceLatitude>49.9</referenceLatitude>
+        <referenceLongitude>8.9</referenceLongitude>
+        <referenceHeading>0</referenceHeading>
+        <referenceAltitude>0</referenceAltitude>
+        <offset>0 0 0</offset>
+        <drift>0.001 0.001 0.001</drift>
+        <gaussianNoise>0.05 0.05 0.05</gaussianNoise>
+        <velocityDrift>0.001 0.001 0.001</velocityDrift>
+        <velocityGaussianNoise>0.5 0.5 0.5</velocityGaussianNoise>
+        <!-- <drift>0.001 0.001 0.001</drift>-->
+        <!-- <gaussianNoise>0.01 0.01 0.01</gaussianNoise>-->
+        <!-- <velocityDrift>0 0 0</velocityDrift>-->
+        <!-- <velocityGaussianNoise>0.05 0.05 0.05</velocityGaussianNoise>-->
+      </plugin>
+    </gazebo>
+  </xacro:macro>
+</robot>
