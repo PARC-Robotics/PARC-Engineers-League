@@ -8,19 +8,33 @@
         <mass value="0.15717" />
         <inertia ixx="6.7885E-05" ixy="-1.3987E-07" ixz="-8.1554E-07" iyy="0.00013173" iyz="-9.0932E-08" izz="7.1972E-05" />
       </inertial>
-      <visual>
+      <visual name="visual">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://parc_robot/meshes/enclosure.stl" scale="0.001 0.001 0.001" />
+          <!-- <mesh filename="package://parc_robot/meshes/enclosure.dae" scale="0.001 0.001 0.001" /> -->
+          <mesh filename="package://parc_robot/meshes/enclosure_with_overhang.stl" scale="0.001 0.001 0.001" />
         </geometry>
-        <material name="">
+
+        <!-- <material name="">
           <color rgba="0.64706 0.61961 0.58824 1" />
-        </material>
+        </material> -->
+
+        <!-- <material name="">
+          <script> -->
+            <!-- <uri>file://parc_robot/materials/scripts/</uri> -->
+            <!-- <uri>file://parc_robot/materials/textures/</uri> -->
+            <!-- <name>dirty_metal</name> -->
+            <!-- <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+        </material> -->
+
       </visual>
-      <collision>
+      <collision name="collision">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://parc_robot/meshes/enclosure.stl" scale="0.001 0.001 0.001" />
+          <!-- <mesh filename="package://parc_robot/meshes/enclosure.dae" scale="0.001 0.001 0.001" /> -->
+          <mesh filename="package://parc_robot/meshes/enclosure_with_overhang.stl" scale="0.001 0.001 0.001" />
         </geometry>
       </collision>
     </link>

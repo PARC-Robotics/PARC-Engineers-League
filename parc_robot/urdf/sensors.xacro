@@ -25,12 +25,14 @@
 
   <!-- left_side_camera -->
   <xacro:left_side_camera parent="base_link">
-    <origin xyz="0 0.5 0.7" rpy="0 1.0472 1.571428571"/>
+    <origin xyz="0 0.55 0.635" rpy="0 1.5708 1.571428571"/>
+    <!-- <origin xyz="0 0.7 0.7" rpy="0 1.0472 1.571428571"/> -->
   </xacro:left_side_camera>
 
     <!-- right_side_camera -->
   <xacro:right_side_camera parent="base_link">
-    <origin xyz="0 -0.5 0.7" rpy="0 2.0944 1.571428571"/>
+    <origin xyz="0 -0.55 0.635" rpy="0 1.5708 1.571428571"/>
+    <!-- <origin xyz="0 -0.7 0.7" rpy="0 2.0944 1.571428571"/> -->
   </xacro:right_side_camera>
 
 </robot>

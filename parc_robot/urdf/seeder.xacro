@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<robot name="seeder" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="seeder" params="parent *origin name:=seeder">
+    <!-- Joints and Links, standard URDF stuff -->
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="-0.00029774 0.0066667 0.00013047" rpy="0 0 0" />
+        <mass value="5" />
+        <inertia ixx="6.7885E-05" ixy="-1.3987E-07" ixz="-8.1554E-07" iyy="0.00013173" iyz="-9.0932E-08" izz="7.1972E-05" />
+      </inertial>
+      <visual name="visual">
+        <origin xyz="-0.3 0 -0.21" rpy="0 0 3.142" />
+        <geometry>
+          <mesh filename="package://parc_robot/meshes/seeder_v1.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <origin xyz="-0.3 0 -0.21" rpy="0 0 3.142" />
+        <geometry>
+          <mesh filename="package://parc_robot/meshes/seeder_v1.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="seeder_attachment_link">
+      <inertial>
+        <mass value="0.5" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="2.288641" ixy="0" ixz="0" iyy="5.103976" iyz="0" izz="3.431465" />
+      </inertial>
+      <visual name="visual">
+        <origin xyz="0.3 0 0.21" rpy="0 0 3.142" />
+        <geometry>
+          <box size="0.05 0.05 0.05"/>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="${name}_joint" type="revolute">
+      <origin xyz="0.3 0 0.21" rpy="0 0 0" />
+      <axis xyz="0 0 1"/>
+      <!-- <axis2 xyz="0 1 0" /> -->
+      <parent link="seeder_attachment_link" />
+      <child link="${name}_link" />
+      <limit upper="0.523599" lower="-0.523599" effort="0.01" velocity="0.01"/>
+    </joint>
+
+    <!-- <joint:universal name="universal_joint">
+      <body1>body1_name</body1>
+      <body2>body2_name</body2>
+      <anchor>anchor_body</anchor>
+      <axis1>0 0 1</axis1>
+      <axis2>0 1 0</axis2>
+      <lowStop1>0</lowStop1>
+      <highStop1>30</highStop1>
+      <lowStop2>0</lowStop2>
+      <highStop2>30</highStop2>
+  </joint:universal> -->
+
+    <joint name="seeder_attachment_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent}" />
+      <child link="seeder_attachment_link" />
+    </joint>
+
+    <gazebo>
+    <mu1 value="1.0"/>
+    <mu2 value="0.9"/>
+    <kp value="10000000.0" />
+    <kd value="1.0" />
+    <fdir1 value="1 0 0"/>
+    <minDepth value="0.001" />
+    <maxContacts value="64"/>
+  </gazebo>
+  </xacro:macro>
+</robot>

@@ -31,7 +31,7 @@
 
     <!-- ========================= Robot Model ========================= -->
     <!-- Load URDF -->
-    <param name="robot_description" command="$(find xacro)/xacro '$(find parc_robot)/urdf/robot.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro '$(find parc_robot)/urdf/robot_with_seeder.xacro'" />
 
     <!-- Generate TF from URDF -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />

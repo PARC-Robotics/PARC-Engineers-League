@@ -3,10 +3,17 @@
 
   <!-- Includes -->
   <xacro:include filename="$(find parc_robot)/urdf/enclosure.xacro" />
+  <!-- <xacro:include filename="$(find parc_robot)/urdf/seeder.xacro" /> -->
 
   <!-- enclosure -->
   <xacro:enclosure parent="base_link">
     <origin xyz="0.7 0 -0.21" rpy="0 0 0" />
   </xacro:enclosure>
+
+  <!-- seeder -->
+  <!-- <xacro:seeder parent="base_link">
+    <origin xyz="-0.75 0 -0.21" rpy="0 0 0" /> -->
+    <!-- <origin xyz="-0.75 0 -0.21" rpy="0 0 0" /> -->
+  <!-- </xacro:seeder> -->
 
 </robot>

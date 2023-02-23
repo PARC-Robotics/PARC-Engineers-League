@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<robot name="scout_v2" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find parc_robot)/urdf/robot.xacro" />
+  <xacro:include filename="$(find parc_robot)/urdf/seeder.xacro" />
+
+  <!-- Seeder -->
+  <xacro:seeder parent="base_link">
+    <origin xyz="-0.75 0 -0.21" rpy="0 0 0" />
+    <!-- <origin xyz="-0.75 0 -0.21" rpy="0 0 0" /> -->
+  </xacro:seeder>
+
+</robot>
