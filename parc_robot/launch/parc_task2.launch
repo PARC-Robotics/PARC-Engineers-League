@@ -39,7 +39,7 @@
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
-    <node name="task_2" pkg="parc_robot" type="task_2.py" args="$(arg speed) $(arg route)" />
+    <node name="task_2" pkg="parc_robot" type="task_2.py" args="$(arg speed) $(arg route)" output="screen" />
 
     <!-- ========================= Simulator ========================= -->
     <!-- Start Gazebo -->
