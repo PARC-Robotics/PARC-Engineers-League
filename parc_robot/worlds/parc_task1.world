@@ -174,12 +174,62 @@
     <include>
       <uri>model://farmland</uri>
       <pose>0 0 0 0 0 0</pose>
+      <static>false</static>
+    </include>
+
+    <include>
+      <uri>model://peg</uri>
+      <pose>6.220254 -1.292501 0 0 0 0</pose>
+      <name>peg_01</name>
       <static>true</static>
     </include>
 
     <include>
       <uri>model://peg</uri>
-      <pose>5.5623 -0.2259 0 0 0 0</pose>
+      <pose>-6.687685 -1.476404 0 0 0 0</pose>
+      <name>peg_02</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://peg</uri>
+      <pose>-6.572887 -3.482042 0 0 0 0</pose>
+      <name>peg_03</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://peg</uri>
+      <pose>5.856168 -3.245686 0 0 0 0</pose>
+      <name>peg_04</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://peg</uri>
+      <pose>6.272580 -5.294744 0 0 0 0</pose>
+      <name>peg_05</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://peg</uri>
+      <pose>-6.525532 -5.476363 0 0 0 0</pose>
+      <name>peg_06</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://peg</uri>
+      <pose>-6.470754 -7.988948 0 0 0 0</pose>
+      <name>peg_07</name>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://peg</uri>
+      <pose>5.960568 -7.343846 0 0 0 0</pose>
+      <name>peg_08</name>
       <static>true</static>
     </include>
 
@@ -260,7 +310,7 @@
       <static>true</static>
     </include>
 
-    <include>
+    <!-- <include>
       <uri>model://lettuce_crop_02</uri>
       <pose>5.57589 -0.991998 0.3785 0 0 -2.06573</pose>
       <name>lettuce_0</name>
@@ -1938,11 +1988,11 @@
       <pose>-5.98595 -7.72815 0.3785 0 0 4.50013</pose>
       <name>lettuce_239</name>
       <static>true</static>
-    </include>
+    </include> -->
 
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>5.45099 -4.71679 1.58055 0 0.275643 2.35619</pose>
+        <pose frame=''>13.420930 -4.105510 4.599320 -0.000001 0.331643 3.056189</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

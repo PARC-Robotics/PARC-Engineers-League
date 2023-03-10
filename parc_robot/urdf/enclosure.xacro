@@ -12,21 +12,20 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <!-- <mesh filename="package://parc_robot/meshes/enclosure.dae" scale="0.001 0.001 0.001" /> -->
-          <mesh filename="package://parc_robot/meshes/enclosure_with_overhang.stl" scale="0.001 0.001 0.001" />
+          <!-- <mesh filename="package://parc_robot/meshes/enclosure_with_overhang.stl" scale="0.001 0.001 0.001" /> -->
+          <mesh filename="package://parc_robot/meshes/enclosure_with_overhang.dae" scale="0.001 0.001 0.001" />
         </geometry>
 
-        <!-- <material name="">
-          <color rgba="0.64706 0.61961 0.58824 1" />
+        <!-- <material name="dirty_metal">
+          <script>
+            <uri>model://lettuce_crop_01/materials/scripts/</uri>
+            <uri>model://lettuce_crop_01/materials/textures/</uri>
+            <name>dirty_metal</name>
+          </script>
         </material> -->
 
         <!-- <material name="">
-          <script> -->
-            <!-- <uri>file://parc_robot/materials/scripts/</uri> -->
-            <!-- <uri>file://parc_robot/materials/textures/</uri> -->
-            <!-- <name>dirty_metal</name> -->
-            <!-- <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
+          <color rgba="0.64706 0.61961 0.58824 1" />
         </material> -->
 
       </visual>
@@ -34,7 +33,8 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <!-- <mesh filename="package://parc_robot/meshes/enclosure.dae" scale="0.001 0.001 0.001" /> -->
-          <mesh filename="package://parc_robot/meshes/enclosure_with_overhang.stl" scale="0.001 0.001 0.001" />
+          <!-- <mesh filename="package://parc_robot/meshes/enclosure_with_overhang.stl" scale="0.001 0.001 0.001" /> -->
+          <mesh filename="package://parc_robot/meshes/enclosure_with_overhang.dae" scale="0.001 0.001 0.001" />
         </geometry>
       </collision>
     </link>

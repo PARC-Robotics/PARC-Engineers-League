@@ -111,8 +111,13 @@ catkin_package(
 
 ## Added
 include_directories(${catkin_INCLUDE_DIRS})
+
 add_executable(move src/move.cpp)
 target_link_libraries(move ${catkin_LIBRARIES})
+
+add_executable(goal_param src/goal_param.cpp)
+target_link_libraries(goal_param ${catkin_LIBRARIES})
+
 
 ###########
 ## Build ##
