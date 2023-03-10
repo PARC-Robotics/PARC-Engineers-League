@@ -3,6 +3,7 @@
     <!-- Check if testing on route 1 or 2 -->
 
     <arg name="route" default="route1" />
+    <arg name="speed" default="0.1" />
 
 
     <!-- Robot initial pose -->
@@ -17,9 +18,9 @@
     <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" />
 
     <!-- If Route 2 -->
-    <arg name="x" value="-4" unless="$(eval route=='route1')" />
-    <arg name="y" value="-10.9" unless="$(eval route=='route1')" />
-    <arg name="z" value="0.373011" unless="$(eval route=='route1')" />
+    <arg name="x" value="-6.786472" unless="$(eval route=='route1')" />
+    <arg name="y" value="-6.524966" unless="$(eval route=='route1')" />
+    <arg name="z" value="0.538968" unless="$(eval route=='route1')" />
     <arg name="yaw" value="0" unless="$(eval route=='route1')" />
     <!-- Route 2 Goal Location -->
     <arg name="goal_x" default="5" unless="$(eval route=='route1')" />
@@ -37,6 +38,8 @@
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <node name="task_2" pkg="parc_robot" type="task_2.py" args="$(arg speed) $(arg route)" output="screen" />
 
     <!-- ========================= Simulator ========================= -->
     <!-- Start Gazebo -->
