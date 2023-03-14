@@ -15,7 +15,7 @@
         </inertia>
         <pose>0 0 0.005 0 0 0 0 0</pose>
       </inertial>
-      <collision name="collision_leaves">
+      <!-- <collision name="collision_leaves">
         <geometry>
           <mesh>
             <uri>model://unknown_weed/meshes/unknown_weed.dae</uri>
@@ -57,7 +57,7 @@
             </ode>
           </friction>
         </surface>
-      </collision>
+      </collision> -->
       <visual name="visual">
         <geometry>
           <mesh>
