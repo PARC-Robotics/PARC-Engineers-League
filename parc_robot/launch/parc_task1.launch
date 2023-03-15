@@ -13,16 +13,35 @@
   <arg name="goal_x" default="-6.786472" if="$(eval route=='route1')" />
   <arg name="goal_y" default="-6.524966" if="$(eval route=='route1')" />
   <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" />
+  <!-- Route 1 GPS Goal Location -->
+  <arg name="goal_lat" default="-6.786472" if="$(eval route=='route1')" />
+  <arg name="goal_lon" default="-6.524966" if="$(eval route=='route1')" />
 
   <!-- If Route 2 -->
-  <arg name="x" value="-4" unless="$(eval route=='route1')" />
-  <arg name="y" value="-10.9" unless="$(eval route=='route1')" />
-  <arg name="z" value="0.373011" unless="$(eval route=='route1')" />
-  <arg name="yaw" value="0" unless="$(eval route=='route1')" />
+  <arg name="x" value="-4" if="$(eval route=='route2')" />
+  <arg name="y" value="-10.9" if="$(eval route=='route2')" />
+  <arg name="z" value="0.373011" if="$(eval route=='route2')" />
+  <arg name="yaw" value="0" if="$(eval route=='route2')" />
   <!-- Route 2 Goal Location -->
-  <arg name="goal_x" default="5" unless="$(eval route=='route1')" />
-  <arg name="goal_y" default="-1.5" unless="$(eval route=='route1')" />
-  <arg name="goal_z" default="0.373011" unless="$(eval route=='route1')" />
+  <arg name="goal_x" default="5" if="$(eval route=='route2')" />
+  <arg name="goal_y" default="-1.5" if="$(eval route=='route2')" />
+  <arg name="goal_z" default="0.373011" if="$(eval route=='route2')" />
+  <!-- Route 2 GPS Goal Location -->
+  <arg name="goal_lat" default="-6.786472" if="$(eval route=='route2')" />
+  <arg name="goal_lon" default="-6.524966" if="$(eval route=='route2')" />
+
+  <!-- If Route 3 -->
+  <arg name="x" value="-4" if="$(eval route=='route3')" />
+  <arg name="y" value="-10.9" if="$(eval route=='route3')" />
+  <arg name="z" value="0.373011" if="$(eval route=='route3')" />
+  <arg name="yaw" value="0" if="$(eval route=='route3')" />
+  <!-- Route 2 Goal Location -->
+  <arg name="goal_x" default="5" if="$(eval route=='route3')" />
+  <arg name="goal_y" default="-1.5" if="$(eval route=='route3')" />
+  <arg name="goal_z" default="0.373011" if="$(eval route=='route3')" />
+  <!-- Route 3 GPS Goal Location -->
+  <arg name="goal_lat" default="-6.786472" if="$(eval route=='route3')" />
+  <arg name="goal_lon" default="-6.524966" if="$(eval route=='route3')" />
 
   <!-- Gazebo World file to load -->
   <arg name="world_name" default="$(find parc_robot)/worlds/parc_task1.world" />
@@ -65,8 +84,13 @@
                 -y $(arg goal_y)
                 -z $(arg goal_z)" />
 
-  <!-- Goal and Pegs GPS Coordinates -->
-  <rosparam file="$(find parc_robot)/config/gps_coordinates.yaml" command="load" />
+  <!-- GPS Coordinate of Goal Location -->
+  <param name="goal_latitude" type="float" value="$(arg goal_lat)" />
+  <param name="goal_longitude" type="float" value="$(arg goal_lon)" />
+  <!-- <rosparam file="$(find parc_robot)/config/goal_coordinates.yaml" command="load" /> -->
+
+  <!-- GPS Coordinate of Pegs -->
+  <rosparam file="$(find parc_robot)/config/peg_coordinates.yaml" command="load" />
 
   <!-- ========================= Vizualize ========================= -->
   <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find parc-robot)/rviz/parc_task1.rviz" /> -->

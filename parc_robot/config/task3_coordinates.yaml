@@ -1,0 +1,35 @@
+goal_location:
+  latitude: 49.90004925691628
+  longitude: 8.900032340970233
+
+peg_01:
+  latitude: 49.900049851201906
+  longitude: 8.900005449860442
+
+peg_02:
+  latitude: 49.89993591730022
+  longitude: 8.900012327030653
+
+peg_03:
+  latitude: 49.89993603548767
+  longitude: 8.900039201940684
+
+peg_04:
+  latitude: 49.9000518096483
+  longitude: 8.900042026448917
+
+peg_05:
+  latitude: 49.900055752473676
+  longitude: 8.900068664483953
+
+peg_06:
+  latitude: 49.89993505292496
+  longitude: 8.90006523863602
+
+peg_07:
+  latitude: 49.899935910940705
+  longitude: 8.900100142509832
+
+peg_08:
+  latitude: 49.90005019262615
+  longitude: 8.900095895154493
