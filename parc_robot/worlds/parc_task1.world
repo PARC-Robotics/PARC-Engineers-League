@@ -310,7 +310,7 @@
       <static>true</static>
     </include>
 
-    <include>
+    <!-- <include>
       <uri>model://lettuce_crop_02</uri>
       <pose>5.57589 -0.991998 0.3785 0 0 -2.06573</pose>
       <name>lettuce_0</name>
@@ -1988,7 +1988,7 @@
       <pose>-5.98595 -7.72815 0.3785 0 0 4.50013</pose>
       <name>lettuce_239</name>
       <static>true</static>
-    </include>
+    </include> -->
 
     <gui fullscreen='0'>
       <camera name='user_camera'>
