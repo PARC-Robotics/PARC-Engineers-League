@@ -1,8 +1,8 @@
 <launch>
     <!-- ========================= CLI Arguments ========================= -->
-    <!-- Check if testing on route 1 or 2 -->
+    <!-- Check if testing on route 1, 2 or 3. Use route1 as default if any other argument is provided -->
 
-    <arg name="route" default="route1" />
+    <arg name="route" default="route1" unless="$(eval route in ['route1', 'route2', 'route3'])"/>
     <arg name="speed" default="0.1" />
 
 
@@ -18,14 +18,24 @@
     <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" />
 
     <!-- If Route 2 -->
-    <arg name="x" value="-6.786472" unless="$(eval route=='route1')" />
-    <arg name="y" value="-6.524966" unless="$(eval route=='route1')" />
-    <arg name="z" value="0.538968" unless="$(eval route=='route1')" />
-    <arg name="yaw" value="0" unless="$(eval route=='route1')" />
+    <arg name="x" value="5.85233" if="$(eval route=='route2')" />
+    <arg name="y" value="-4.191994" if="$(eval route=='route2')" />
+    <arg name="z" value="0.503722" if="$(eval route=='route2')" />
+    <arg name="yaw" value="0" if="$(eval route=='route2')" />
     <!-- Route 2 Goal Location -->
-    <arg name="goal_x" default="5" unless="$(eval route=='route1')" />
-    <arg name="goal_y" default="-1.5" unless="$(eval route=='route1')" />
-    <arg name="goal_z" default="0.373011" unless="$(eval route=='route1')" />
+    <arg name="goal_x" default="5" if="$(eval route=='route2')" />
+    <arg name="goal_y" default="-1.5" if="$(eval route=='route2')" />
+    <arg name="goal_z" default="0.373011" if="$(eval route=='route2')" />
+
+    <!-- If Route 3 -->
+    <arg name="x" value="-6.786472" if="$(eval route=='route3')" />
+    <arg name="y" value="-6.524966" if="$(eval route=='route3')" />
+    <arg name="z" value="0.538968" if="$(eval route=='route3')" />
+    <arg name="yaw" value="0" if="$(eval route=='route3')" />
+    <!-- Route 3 Goal Location -->
+    <arg name="goal_x" default="5" if="$(eval route=='route3')" />
+    <arg name="goal_y" default="-1.5" if="$(eval route=='route3')" />
+    <arg name="goal_z" default="0.373011" if="$(eval route=='route3')" />
 
     <!-- Gazebo World file to load -->
     <arg name="world_name" default="$(find parc_robot)/worlds/parc_task2.world" />

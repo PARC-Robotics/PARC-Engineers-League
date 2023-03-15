@@ -4,7 +4,8 @@ import rospy
 from gazebo_msgs.msg import ModelState
 from geometry_msgs.msg import Pose, Twist, Vector3, Point, Quaternion
 import sys
-from routes import route1, route2
+from routes import ROUTE_1, ROUTE_2, ROUTE_3
+from parc_robot.msg import RobotStatus
 
 
 class RobotController:
@@ -12,11 +13,13 @@ class RobotController:
     Interpolates path at 30 Hz to move the robot
     '''
 
-    def __init__(self, speed=0.1, route="route1") -> None:
+    def __init__(self, speed=0.1, route=ROUTE_1) -> None:
         rospy.init_node("robot_controller")
         self.pub = rospy.Publisher(
             "/gazebo/set_model_state", ModelState, queue_size=30)
-        self.path = route1 if route == "route1" else route2
+        self.state_pub = rospy.Publisher(
+            "/parc_robot/robot_status", RobotStatus, queue_size=10)
+        self.path = route
         self.speed = speed
         self.frequency = 30
         self.states = self.get_states()
@@ -122,12 +125,15 @@ class RobotController:
 
     def run(self):
         while self.pub.get_num_connections() == 0:
-            rospy.loginfo(f"Waiting for subscriber to {self.pub.resolved_name}")
+            rospy.loginfo(
+                f"Waiting for subscriber to {self.pub.resolved_name}")
             rospy.sleep(1)
 
         rospy.loginfo(f"Publishing to {self.pub.resolved_name}")
+        self.state_pub.publish(RobotStatus(status="started"))
         while not rospy.is_shutdown():
             if self.current_state >= len(self.states):
+                self.state_pub.publish(RobotStatus(status="finished"))
                 rospy.signal_shutdown("At the end of path")
                 continue
 
@@ -168,6 +174,14 @@ class RobotController:
 
 if __name__ == "__main__":
     speed = float(sys.argv[1])
-    route = sys.argv[2]
+    route_arg = sys.argv[2]
+    
+    route = ROUTE_1
+    
+    if route_arg == "route2":
+        route = ROUTE_2
+    elif route_arg == "route3":
+        route = ROUTE_3
+    
     controller = RobotController(speed=speed, route=route)
     controller.run()

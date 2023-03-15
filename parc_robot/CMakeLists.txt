@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   geometry_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -47,11 +48,12 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  RobotStatus.msg
+  Weed.msg
+  WeedDetection.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -68,10 +70,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs  # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -105,18 +107,18 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES parc_robot
-#  CATKIN_DEPENDS roscpp rospy
+  CATKIN_DEPENDS roscpp rospy message_runtime
 #  DEPENDS system_lib
 )
 
 ## Added
 include_directories(${catkin_INCLUDE_DIRS})
 
-add_executable(move src/move.cpp)
-target_link_libraries(move ${catkin_LIBRARIES})
+# add_executable(move src/move.cpp)
+# target_link_libraries(move ${catkin_LIBRARIES})
 
-add_executable(goal_param src/goal_param.cpp)
-target_link_libraries(goal_param ${catkin_LIBRARIES})
+# add_executable(goal_param src/goal_param.cpp)
+# target_link_libraries(goal_param ${catkin_LIBRARIES})
 
 
 ###########
