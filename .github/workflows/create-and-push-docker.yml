@@ -29,6 +29,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: https://github.com/PARC-Robotics/PARC-2023-EL.git#docker-config
           push: true
           tags: parcengineersleague/parc-2023:latest
