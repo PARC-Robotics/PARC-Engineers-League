@@ -5,46 +5,87 @@
 
   <!-- Robot initial pose -->
   <!-- If Route 1 -->
-  <arg name="x" default="5.853562" if="$(eval route=='route1')" />
-  <arg name="y" default="-2.120167" if="$(eval route=='route1')" />
-  <arg name="z" default="0.538968" if="$(eval route=='route1')" />
-  <arg name="yaw" default="-3.142857" if="$(eval route=='route1')" />
+  <arg name="x" default="3.474487" if="$(eval route=='route1')" />
+  <arg name="y" default="-5.820211" if="$(eval route=='route1')" />
+  <arg name="z" default="0.524258" if="$(eval route=='route1')" />
+  <arg name="yaw" default="-3.104072" if="$(eval route=='route1')" />
   <!-- Route 1 Goal Location -->
-  <arg name="goal_x" default="-6.786472" if="$(eval route=='route1')" />
-  <arg name="goal_y" default="-6.524966" if="$(eval route=='route1')" />
+  <arg name="goal_x" default="-4.943511" if="$(eval route=='route1')" />
+  <arg name="goal_y" default="-5.622047" if="$(eval route=='route1')" />
   <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" />
   <!-- Route 1 GPS Goal Location -->
-  <arg name="latitude" default="49.89993933393297" if="$(eval route=='route1')" />
-  <arg name="longitude" default="8.90009043700352" if="$(eval route=='route1')" />
+  <arg name="latitude" default="49.89995513748075" if="$(eval route=='route1')" />
+  <arg name="longitude" default="8.90007896815947" if="$(eval route=='route1')" />
 
   <!-- If Route 2 -->
-  <arg name="x" value="-6.786472" if="$(eval route=='route2')" />
-  <arg name="y" value="-6.524966" if="$(eval route=='route2')" />
+  <arg name="x" value="6.479509" if="$(eval route=='route2')" />
+  <arg name="y" value="-2.120167" if="$(eval route=='route2')" />
   <arg name="z" value="0.538968" if="$(eval route=='route2')" />
   <arg name="yaw" value="0" if="$(eval route=='route2')" />
   <!-- Route 2 Goal Location -->
-  <arg name="goal_x" default="5.853562" if="$(eval route=='route2')" />
+  <arg name="goal_x" default="6.479509" if="$(eval route=='route2')" />
   <arg name="goal_y" default="-2.120167" if="$(eval route=='route2')" />
   <arg name="goal_z" default="0.373011" if="$(eval route=='route2')" />
   <!-- Route 2 GPS Goal Location -->
-  <arg name="latitude" default="49.900051312409396" if="$(eval route=='route2')" />
-  <arg name="longitude" default="8.900025958933007" if="$(eval route=='route2')" />
+  <arg name="latitude" default="49.90005868661742" if="$(eval route=='route2')" />
+  <arg name="longitude" default="8.900029824851464" if="$(eval route=='route2')" />
 
   <!-- If Route 3 -->
-  <arg name="x" value="5.916915" if="$(eval route=='route3')" />
-  <arg name="y" value="-6.142927" if="$(eval route=='route3')" />
-  <arg name="z" value="0.373011" if="$(eval route=='route3')" />
-  <arg name="yaw" value="-3.142857" if="$(eval route=='route3')" />
+  <arg name="x" value="-4.943510" if="$(eval route=='route3')" />
+  <arg name="y" value="-2.638408" if="$(eval route=='route3')" />
+  <arg name="z" value="0.516969" if="$(eval route=='route3')" />
+  <arg name="yaw" value="-3.112761" if="$(eval route=='route3')" />
   <!-- Route 3 Goal Location -->
-  <arg name="goal_x" default="-7.018003" if="$(eval route=='route3')" />
-  <arg name="goal_y" default="-2.465828" if="$(eval route=='route3')" />
+  <arg name="goal_x" default="-4.943510" if="$(eval route=='route3')" />
+  <arg name="goal_y" default="-2.638408" if="$(eval route=='route3')" />
   <arg name="goal_z" default="0.373011" if="$(eval route=='route3')" />
   <!-- Route 3 GPS Goal Location -->
-  <arg name="latitude" default="49.89993737278088" if="$(eval route=='route3')" />
-  <arg name="longitude" default="8.900036891123193" if="$(eval route=='route3')" />
+  <arg name="latitude" default="49.89995491965573" if="$(eval route=='route3')" />
+  <arg name="longitude" default="8.900036272980314" if="$(eval route=='route3')" />
+
+  <!-- Robot initial pose -->
+  <!-- If Route 1 -->
+  <!-- <arg name="x" default="6.479509" if="$(eval route=='route1')" />
+  <arg name="y" default="-2.143890" if="$(eval route=='route1')" />
+  <arg name="z" default="0.524258" if="$(eval route=='route1')" />
+  <arg name="yaw" default="-3.104072" if="$(eval route=='route1')" /> -->
+  <!-- Route 1 Goal Location -->
+  <!-- <arg name="goal_x" default="-4.943511" if="$(eval route=='route1')" />
+  <arg name="goal_y" default="-5.622047" if="$(eval route=='route1')" />
+  <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" /> -->
+  <!-- Route 1 GPS Goal Location -->
+  <!-- <arg name="latitude" default="49.89995513748075" if="$(eval route=='route1')" />
+  <arg name="longitude" default="8.90007896815947" if="$(eval route=='route1')" /> -->
+
+  <!-- If Route 2 -->
+  <!-- <arg name="x" value="-4.943511" if="$(eval route=='route2')" />
+  <arg name="y" value="-2.143890" if="$(eval route=='route2')" />
+  <arg name="z" value="0.538968" if="$(eval route=='route2')" />
+  <arg name="yaw" value="0" if="$(eval route=='route2')" /> -->
+  <!-- Route 2 Goal Location -->
+  <!-- <arg name="goal_x" default="6.479509" if="$(eval route=='route2')" />
+  <arg name="goal_y" default="-2.120167" if="$(eval route=='route2')" />
+  <arg name="goal_z" default="0.373011" if="$(eval route=='route2')" /> -->
+  <!-- Route 2 GPS Goal Location -->
+  <!-- <arg name="latitude" default="49.90005868661742" if="$(eval route=='route2')" />
+  <arg name="longitude" default="8.900029824851464" if="$(eval route=='route2')" /> -->
+
+  <!-- If Route 3 -->
+  <!-- <arg name="x" value="6.422005" if="$(eval route=='route3')" />
+  <arg name="y" value="-5.174587" if="$(eval route=='route3')" />
+  <arg name="z" value="0.516969" if="$(eval route=='route3')" />
+  <arg name="yaw" value="-3.112761" if="$(eval route=='route3')" /> -->
+  <!-- Route 3 Goal Location -->
+  <!-- <arg name="goal_x" default="-4.943510" if="$(eval route=='route3')" />
+  <arg name="goal_y" default="-2.638408" if="$(eval route=='route3')" />
+  <arg name="goal_z" default="0.373011" if="$(eval route=='route3')" /> -->
+  <!-- Route 3 GPS Goal Location -->
+  <!-- <arg name="latitude" default="49.89995491965573" if="$(eval route=='route3')" />
+  <arg name="longitude" default="8.900036272980314" if="$(eval route=='route3')" /> -->
 
   <!-- Gazebo World file to load -->
   <arg name="world_name" default="$(find parc_robot)/worlds/parc_task1.world" />
+  <!-- <arg name="world_name" default="$(find parc_robot)/worlds/task1.world" /> -->
 
   <!-- ========================= Robot Model ========================= -->
   <!-- Load URDF -->
