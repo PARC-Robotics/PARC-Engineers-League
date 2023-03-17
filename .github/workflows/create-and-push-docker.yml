@@ -5,8 +5,7 @@ name: Create and push Docker image
 on:
   push:
     branches:
-      - master
-      - docker-config
+      - '*'
 
 jobs:
   build:
