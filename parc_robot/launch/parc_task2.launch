@@ -82,5 +82,5 @@
                   -z $(arg goal_z)" />
 
     <!-- ========================= Vizualize ========================= -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find parc-robot)/rviz/parc_task2.rviz" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find parc_robot)/rviz/parc_task2.rviz" />
 </launch>

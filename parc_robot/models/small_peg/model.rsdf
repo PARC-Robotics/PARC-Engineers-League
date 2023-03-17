@@ -16,7 +16,7 @@
   izz  = mass/2.0 * r**2
 %>
 <sdf version="1.5">
-  <model name="wooden_pega">
+  <model name="small_peg">
     <link name="link">
       <pose>0 0 <%= h/2 %> 0 0 0</pose>
       <inertial>

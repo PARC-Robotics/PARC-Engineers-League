@@ -1,4 +1,4 @@
-<!-- <?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <sdf version="1.4">
   <model name="farmland">
     <static>true</static>
@@ -43,7 +43,7 @@
               <fade_dist>5</fade_dist>
             </blend>
             <uri>model://farmland/materials/textures/farmland.png</uri>
-            <size>100.000000000000002 100.000000000000002 0</size>
+            <size>100.000000000000002 100.000000000000002 0.4</size>
             <pos>0 0 0</pos>
           </heightmap>
         </geometry>
@@ -52,7 +52,7 @@
         <geometry>
           <heightmap>
             <uri>model://farmland/materials/textures/farmland.png</uri>
-            <size>300.000000000000002 300.000000000000002 0</size>
+            <size>400.000000000000002 400.000000000000002 0.4</size>
             <pos>0 0 0</pos>
           </heightmap>
         </geometry>
@@ -68,4 +68,3 @@
     </link>
   </model>
 </sdf>
--->
