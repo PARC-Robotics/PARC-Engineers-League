@@ -14,7 +14,7 @@
           <izz>0.0001755</izz>
         </inertia>
       </inertial>
-      <collision name="collision">
+      <!-- <collision name="collision">
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
@@ -38,7 +38,7 @@
             </ode>
           </contact>
         </surface>
-      </collision>
+      </collision> -->
       <visual name="visual">
         <pose>0 0 0 0 0 0</pose>
         <geometry>

@@ -2,7 +2,7 @@
     <!-- ========================= CLI Arguments ========================= -->
     <!-- Check if testing on route 1, 2 or 3. Use route1 as default if any other argument is provided -->
 
-    <arg name="route" default="route1" unless="$(eval route in ['route1', 'route2', 'route3'])"/>
+    <arg name="route" default="route1" />
     <arg name="speed" default="0.1" />
 
 
@@ -82,5 +82,5 @@
                   -z $(arg goal_z)" />
 
     <!-- ========================= Vizualize ========================= -->
-    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find parc-robot)/rviz/parc_task2.rviz" /> -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find parc-robot)/rviz/parc_task2.rviz" />
 </launch>
