@@ -6,7 +6,7 @@ from geometry_msgs.msg import Pose, Twist, Vector3, Point, Quaternion
 import sys
 from routes import ROUTE_1, ROUTE_2, ROUTE_3
 from parc_robot.msg import RobotStatus
-
+import sys
 
 class RobotController:
     '''
@@ -173,8 +173,12 @@ class RobotController:
 
 
 if __name__ == "__main__":
-    speed = float(sys.argv[1])
-    route_arg = sys.argv[2]
+    try:
+        speed = float(sys.argv[1])
+        route_arg = sys.argv[2]
+    except IndexError:
+        print("Usage: python3 task_2.py <speed> <route>")
+        sys.exit(1)
     
     route = ROUTE_1
     
@@ -182,6 +186,9 @@ if __name__ == "__main__":
         route = ROUTE_2
     elif route_arg == "route3":
         route = ROUTE_3
+        
+    # Sleep for 5 seconds to allow gazebo to start
+    rospy.sleep(5)
     
     controller = RobotController(speed=speed, route=route)
     controller.run()
