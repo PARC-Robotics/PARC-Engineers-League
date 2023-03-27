@@ -5,8 +5,8 @@ from gazebo_msgs.msg import ModelState
 from geometry_msgs.msg import Pose, Twist, Vector3, Point, Quaternion
 import sys
 from routes import ROUTE_1, ROUTE_2, ROUTE_3
-from parc_robot.msg import RobotStatus
-import sys
+from std_msgs.msg import String
+
 
 class RobotController:
     '''
@@ -18,7 +18,7 @@ class RobotController:
         self.pub = rospy.Publisher(
             "/gazebo/set_model_state", ModelState, queue_size=30)
         self.state_pub = rospy.Publisher(
-            "/parc_robot/robot_status", RobotStatus, queue_size=10)
+            "/parc_robot/robot_status", String, queue_size=10)
         self.path = route
         self.speed = speed
         self.frequency = 30
@@ -48,7 +48,16 @@ class RobotController:
         return new_states
 
     def interpolate(self, state1, state2, t):
-        # Interpolate between two states at time t
+        """Interpolate between two states at time t
+
+        Args:
+            state1  (dict): State 1
+            state2  (dict): State 2
+            t  (float): Time between 0 and 1
+
+        Returns:
+            dict: Interpolated state
+        """
         new_state = {}
         new_state["pose"] = self.interpolate_pose(
             state1["pose"], state2["pose"], t)
@@ -130,10 +139,10 @@ class RobotController:
             rospy.sleep(1)
 
         rospy.loginfo(f"Publishing to {self.pub.resolved_name}")
-        self.state_pub.publish(RobotStatus(status="started"))
+        self.state_pub.publish("started")
         while not rospy.is_shutdown():
             if self.current_state >= len(self.states):
-                self.state_pub.publish(RobotStatus(status="finished"))
+                self.state_pub.publish("finished")
                 rospy.signal_shutdown("At the end of path")
                 continue
 
@@ -177,18 +186,19 @@ if __name__ == "__main__":
         speed = float(sys.argv[1])
         route_arg = sys.argv[2]
     except IndexError:
-        print("Usage: python3 task_2.py <speed> <route>")
+        print(
+            "\033[91m" + "Usage: python robot_controller.py <speed> <route>" + "\033[0m")
         sys.exit(1)
-    
+
     route = ROUTE_1
-    
+
     if route_arg == "route2":
         route = ROUTE_2
     elif route_arg == "route3":
         route = ROUTE_3
-        
+
     # Sleep for 5 seconds to allow gazebo to start
     rospy.sleep(5)
-    
+
     controller = RobotController(speed=speed, route=route)
     controller.run()
