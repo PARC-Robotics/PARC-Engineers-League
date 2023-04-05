@@ -3,8 +3,7 @@
     <!-- Check if testing on route 1, 2 or 3. Use route1 as default if any other argument is provided -->
 
     <arg name="route" default="route1" />
-    <arg name="speed" default="0.1" />
-
+    <arg name="speed" default="0.5" />
 
     <!-- Robot initial pose -->
     <!-- If Route 1 -->
@@ -12,30 +11,18 @@
     <arg name="y" default="-2.120167" if="$(eval route=='route1')" />
     <arg name="z" default="0.538968" if="$(eval route=='route1')" />
     <arg name="yaw" default="-3.142857" if="$(eval route=='route1')" />
-    <!-- Route 1 Goal Location -->
-    <arg name="goal_x" default="-6.786472" if="$(eval route=='route1')" />
-    <arg name="goal_y" default="-6.524966" if="$(eval route=='route1')" />
-    <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" />
 
     <!-- If Route 2 -->
-    <arg name="x" value="5.85233" if="$(eval route=='route2')" />
-    <arg name="y" value="-4.191994" if="$(eval route=='route2')" />
+    <arg name="x" value="6.015996" if="$(eval route=='route2')" />
+    <arg name="y" value="-3.611922" if="$(eval route=='route2')" />
     <arg name="z" value="0.503722" if="$(eval route=='route2')" />
     <arg name="yaw" value="0" if="$(eval route=='route2')" />
-    <!-- Route 2 Goal Location -->
-    <arg name="goal_x" default="5" if="$(eval route=='route2')" />
-    <arg name="goal_y" default="-1.5" if="$(eval route=='route2')" />
-    <arg name="goal_z" default="0.373011" if="$(eval route=='route2')" />
 
     <!-- If Route 3 -->
-    <arg name="x" value="-6.786472" if="$(eval route=='route3')" />
-    <arg name="y" value="-6.524966" if="$(eval route=='route3')" />
+    <arg name="x" value="-4.179912" if="$(eval route=='route3')" />
+    <arg name="y" value="-5.589171" if="$(eval route=='route3')" />
     <arg name="z" value="0.538968" if="$(eval route=='route3')" />
     <arg name="yaw" value="0" if="$(eval route=='route3')" />
-    <!-- Route 3 Goal Location -->
-    <arg name="goal_x" default="5" if="$(eval route=='route3')" />
-    <arg name="goal_y" default="-1.5" if="$(eval route=='route3')" />
-    <arg name="goal_z" default="0.373011" if="$(eval route=='route3')" />
 
     <!-- Gazebo World file to load -->
     <arg name="world_name" default="$(find parc_robot)/worlds/parc_task2.world" />
@@ -73,13 +60,6 @@
                   -urdf
                   -param robot_description
                   -model 'robot'" />
-
-    <!-- Show Goal Location in Gazebo -->
-    <node name="spawn_goal_location" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-file $(find parc_robot)/models/goal_location/model.sdf -sdf 
-                  -model goal_location
-                  -x $(arg goal_x)
-                  -y $(arg goal_y)
-                  -z $(arg goal_z)" />
 
     <!-- ========================= Vizualize ========================= -->
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find parc_robot)/rviz/parc_task2.rviz" />
