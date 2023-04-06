@@ -2,7 +2,7 @@
 <package format="2">
   <name>parc_robot</name>
   <version>0.0.0</version>
-  <description>The parc_robot package</description>
+  <description>The PARC 2023 Engineers League package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
