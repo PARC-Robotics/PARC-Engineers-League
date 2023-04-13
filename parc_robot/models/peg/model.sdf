@@ -2,7 +2,7 @@
 <sdf version="1.5">
   <model name="peg">
     <link name="link">
-      <pose>0 0 0.5 0 0 0</pose>
+      <pose>0 0 0.35 0 0 0</pose>
       <inertial>
         <mass>0.0175</mass>
         <inertia>
@@ -19,7 +19,7 @@
         <geometry>
           <cylinder>
             <radius> 0.1 </radius>
-            <length> 1.0 </length>
+            <length> 0.6 </length>
           </cylinder>
         </geometry>
         <surface>
@@ -50,7 +50,7 @@
         <geometry>
           <cylinder>
             <radius> 0.1 </radius>
-            <length> 1.0 </length>
+            <length> 0.6 </length>
           </cylinder>
         </geometry>
         <material>
