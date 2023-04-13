@@ -16,10 +16,14 @@
   <!-- Route 1 GPS Goal Location -->
   <arg name="latitude" default="49.89995513748075" if="$(eval route=='route1')" />
   <arg name="longitude" default="8.90007896815947" if="$(eval route=='route1')" />
+  <!-- Route 1 GPS Start Location -->
+  <arg name="start_latitude" default="49.90005764149405" if="$(eval route=='route1')" />
+  <arg name="start_longitude" default="8.900029500459075" if="$(eval route=='route1')" />
+
 
   <!-- If Route 2 -->
-  <arg name="x" value="-4.943511" if="$(eval route=='route2')" />
-  <arg name="y" value="-2.143890" if="$(eval route=='route2')" />
+  <arg name="x" value="-4.855142" if="$(eval route=='route2')" />
+  <arg name="y" value="-5.704758" if="$(eval route=='route2')" />
   <arg name="z" value="0.538968" if="$(eval route=='route2')" />
   <arg name="yaw" value="0" if="$(eval route=='route2')" />
   <!-- Route 2 Goal Location -->
@@ -29,6 +33,10 @@
   <!-- Route 2 GPS Goal Location -->
   <arg name="latitude" default="49.90005868661742" if="$(eval route=='route2')" />
   <arg name="longitude" default="8.900029824851464" if="$(eval route=='route2')" />
+  <!-- Route 2 GPS Start Location -->
+  <arg name="start_latitude" default="49.89995669997637" if="$(eval route=='route2')" />
+  <arg name="start_longitude" default="8.900080135270718" if="$(eval route=='route2')" />
+
 
   <!-- If Route 3 -->
   <arg name="x" value="6.422005" if="$(eval route=='route3')" />
@@ -42,6 +50,10 @@
   <!-- Route 3 GPS Goal Location -->
   <arg name="latitude" default="49.89995491965573" if="$(eval route=='route3')" />
   <arg name="longitude" default="8.900036272980314" if="$(eval route=='route3')" />
+  <!-- Route 3 GPS Start Location -->
+  <arg name="start_latitude" default="49.900058712424624" if="$(eval route=='route3')" />
+  <arg name="start_longitude" default="8.900071621874774" if="$(eval route=='route3')" />
+
 
   <!-- Gazebo World file to load -->
   <arg name="world_name" default="$(find parc_robot)/worlds/parc_task1.world" />
@@ -59,7 +71,7 @@
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
       <arg name="world_name" value="$(arg world_name)" />
       <arg name="paused" value="false" />
-      <arg name="use_sim_time" value="false" />
+      <arg name="use_sim_time" value="true" />
       <arg name="gui" value="true" />
       <arg name="headless" value="false" />
       <arg name="debug" value="false" />
@@ -87,6 +99,8 @@
   <!-- GPS Coordinate of Goal Location -->
   <param name="goal_latitude" type="double" value="$(arg latitude)" />
   <param name="goal_longitude" type="double" value="$(arg longitude)" />
+  <param name="start_latitude" type="double" value="$(arg start_latitude)" />
+  <param name="start_longitude" type="double" value="$(arg start_longitude)" />
 
   <!-- GPS Coordinate of Pegs -->
   <rosparam file="$(find parc_robot)/config/peg_coordinates.yaml" command="load" />

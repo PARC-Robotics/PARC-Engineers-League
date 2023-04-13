@@ -74,9 +74,15 @@
   <exec_depend>rostopic</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>tf2_ros</exec_depend>
+  
+  <!-- <run_depend>python-geographiclib</run_depend> -->
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <gazebo_ros gazebo_media_path="${prefix}" gazebo_model_path="${prefix}/models" gazebo_resource_path="${prefix}/models" />
+    <!-- <mymodule type="matlab" provides="parc_robot gps2cartesian">
+      <resource path="src/gps2cartesian.m" />
+    </mymodule> -->
   </export>
+
 </package>
