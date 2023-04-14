@@ -28,11 +28,11 @@ Reference:
     </plugin>
   </gazebo>
 
-	<gazebo>
+	<!-- <gazebo>
     <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
       <jointName>front_left_wheel, front_right_wheel, rear_left_wheel, rear_right_wheel</jointName>
     </plugin>
-  </gazebo>
+  </gazebo> -->
 
   <!-- kp spring constant, kd damping constant -->
   <gazebo>
