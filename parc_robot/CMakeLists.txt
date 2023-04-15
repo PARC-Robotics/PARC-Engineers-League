@@ -16,7 +16,6 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_python_setup()
 
-## Generate messages in the 'msg' folder
 add_message_files(
   FILES
   RobotStatus.msg
@@ -24,7 +23,6 @@ add_message_files(
   WeedDetection.msg
 )
 
-## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
   std_msgs  # Or other packages containing msgs
