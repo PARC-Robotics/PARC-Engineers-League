@@ -12,15 +12,10 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   geometry_msgs
   message_generation
-  sensor_msgs
 )
 
-#set(CMAKE_PREFIX_PATH "/usr/include")
-#find_package(GeographicLib REQUIRED)
-
-# find_package(Matlab REQUIRED)
-# include_directories(${Matlab_INCLUDE_DIRS})
-# add_library(gps2cartesian gps2cartesian.m)
+set(GeographicLib_DIR "$ENV{HOME}/Downloads/GeographicLib-2.2/BUILD")
+find_package(GeographicLib REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -113,30 +108,38 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES parc_robot
-  CATKIN_DEPENDS roscpp rospy message_runtime sensor_msgs geometry_msgs
-#  DEPENDS system_lib
+  INCLUDE_DIRS include
+  LIBRARIES gps2cartesian
+  CATKIN_DEPENDS roscpp rospy message_runtime geometry_msgs
+  # DEPENDS GeographicLib
 )
 
-## Added
-include_directories(${catkin_INCLUDE_DIRS})
-## include_directories(
-##   include
-##   ${catkin_INCLUDE_DIRS}
-##   # ${GeographicLib_INCLUDE_DIRS}
-## )
+include_directories(
+  include
+  ${catkin_INCLUDE_DIRS}
+  ${GeographicLib_INCLUDE_DIRS}
+)
 
-# add_library(${PROJECT_NAME}
-#  src/gps2cartesian.cpp
-#)
+## Declare a C++ library
+add_library(gps2cartesian src/gps2cartesian.cpp
+)
 
-## add_executable(gps2cartesian src/gps2cartesian.cpp)
-#target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GeographicLib_LIBRARIES})
+target_link_libraries(gps2cartesian
+  ${catkin_LIBRARIES}
+  ${GeographicLib_LIBRARIES}
+)
 
-# add_executable(goal_param src/goal_param.cpp)
-# target_link_libraries(goal_param ${catkin_LIBRARIES})
-
+install(
+  TARGETS gps2cartesian
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+install(
+  DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+)
 
 ###########
 ## Build ##
@@ -145,10 +148,6 @@ include_directories(${catkin_INCLUDE_DIRS})
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 
-## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/parc_robot.cpp
-# )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries

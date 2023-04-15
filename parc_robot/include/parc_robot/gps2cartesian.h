@@ -1,14 +1,6 @@
 #ifndef GPS2CARTESIAN_H
 #define GPS2CARTESIAN_H
 
-#include <GeographicLib/Geodesic.hpp>
-#include <iostream>
-#include <exception>
-#include <ros/ros.h>
-
-using namespace std;
-using namespace GeographicLib;
-
 struct Cartesian{
   double x;
   double y;
