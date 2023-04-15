@@ -25,20 +25,19 @@ add_message_files(
 
 generate_messages(
   DEPENDENCIES
-  std_msgs  # Or other packages containing msgs
+  std_msgs
 )
 
 catkin_package(
-  # INCLUDE_DIRS include
-  # LIBRARIES gps2cartesian
-  CATKIN_DEPENDS roscpp rospy message_runtime geometry_msgs
-  # DEPENDS GeographicLib
+  ## INCLUDE_DIRS include
+  ## LIBRARIES gps2cartesian
+  ## CATKIN_DEPENDS roscpp rospy message_runtime geometry_msgs
 )
 
 include_directories(
-  # include
+  ## include
   ${catkin_INCLUDE_DIRS}
-  # ${GeographicLib_INCLUDE_DIRS}
+  ## ${GeographicLib_INCLUDE_DIRS}
 )
 
 ## add_library(gps2cartesian src/gps2cartesian.cpp

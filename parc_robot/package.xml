@@ -75,10 +75,6 @@
   <exec_depend>rostopic</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>tf2_ros</exec_depend>
-  <!-- <exec_depend>geographiclib</exec_depend> -->
-
-  
-  <!-- <run_depend>python-geographiclib</run_depend> -->
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
