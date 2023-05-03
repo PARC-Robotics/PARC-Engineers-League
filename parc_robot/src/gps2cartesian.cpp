@@ -10,8 +10,8 @@ using namespace GeographicLib;
 GPS get_origin()
 {
   GPS origin;
-  ros::param::get("start_latitude", origin.latitude);
-  ros::param::get("start_longitude", origin.longitude);
+  ros::param::get("origin_latitude", origin.latitude);
+  ros::param::get("origin_longitude", origin.longitude);
 
   return origin;
 }
@@ -43,6 +43,7 @@ Cartesian gps_to_cartesian(double goal_lat, double goal_long)
   Cartesian cartesian;
   cartesian.x = std::cos(azimuth1) * distance;
   cartesian.y = std::sin(azimuth1) * distance;
+  cartesian.y = -(cartesian.y);
 
   return cartesian;
 }
