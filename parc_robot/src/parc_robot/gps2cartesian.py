@@ -10,8 +10,8 @@ def get_origin():
 
 def gps_to_cartesian(goal_lat, goal_long):
   '''
-  Find the cartesian cordinate of the gps location with respect to the gps reference origin
-  which is the start location of the robot.
+  Finds the cartesian cordinate of the gps location with respect to the gps reference origin
+  which is the same as Gazebo world origin.
 
   Args:
     goal_lat : Goal latitude
