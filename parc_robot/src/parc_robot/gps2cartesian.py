@@ -5,13 +5,13 @@ import math
 from geographiclib.geodesic import Geodesic
 
 def get_origin():
-  origin_lat, origin_long = rospy.get_param('start_latitude'), rospy.get_param('start_longitude')
+  origin_lat, origin_long = rospy.get_param('origin_latitude'), rospy.get_param('origin_longitude')
   return origin_lat, origin_long
 
 def gps_to_cartesian(goal_lat, goal_long):
   '''
-  Find the cartesian cordinate of the gps location with respect to the gps reference origin
-  which is the start location of the robot.
+  Finds the cartesian cordinate of the gps location with respect to the gps reference origin
+  which is the same as Gazebo world origin.
 
   Args:
     goal_lat : Goal latitude
@@ -32,5 +32,7 @@ def gps_to_cartesian(goal_lat, goal_long):
   azimuth = math.radians(azimuth)
   x = adjacent = math.cos(azimuth) * hypotenuse
   y = opposite = math.sin(azimuth) * hypotenuse
+
+  y = -y
 
   return x, y

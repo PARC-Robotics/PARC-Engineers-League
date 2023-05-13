@@ -14,12 +14,8 @@
   <arg name="goal_y" default="-5.622047" if="$(eval route=='route1')" />
   <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" />
   <!-- Route 1 GPS Goal Location -->
-  <arg name="latitude" default="49.89995513748075" if="$(eval route=='route1')" />
-  <arg name="longitude" default="8.90007896815947" if="$(eval route=='route1')" />
-  <!-- Route 1 GPS Start Location -->
-  <arg name="start_latitude" default="49.90005764149405" if="$(eval route=='route1')" />
-  <arg name="start_longitude" default="8.900029500459075" if="$(eval route=='route1')" />
-
+  <arg name="latitude" default="49.89995550730833" if="$(eval route=='route1')" />
+  <arg name="longitude" default="8.900078504470644  " if="$(eval route=='route1')" />
 
   <!-- If Route 2 -->
   <arg name="x" value="-4.855142" if="$(eval route=='route2')" />
@@ -31,11 +27,8 @@
   <arg name="goal_y" default="-2.120167" if="$(eval route=='route2')" />
   <arg name="goal_z" default="0.373011" if="$(eval route=='route2')" />
   <!-- Route 2 GPS Goal Location -->
-  <arg name="latitude" default="49.90005868661742" if="$(eval route=='route2')" />
-  <arg name="longitude" default="8.900029824851464" if="$(eval route=='route2')" />
-  <!-- Route 2 GPS Start Location -->
-  <arg name="start_latitude" default="49.89995669997637" if="$(eval route=='route2')" />
-  <arg name="start_longitude" default="8.900080135270718" if="$(eval route=='route2')" />
+  <arg name="latitude" default="49.90005835290429" if="$(eval route=='route2')" />
+  <arg name="longitude" default="8.900029311807417" if="$(eval route=='route2')" />
 
 
   <!-- If Route 3 -->
@@ -48,14 +41,15 @@
   <arg name="goal_y" default="-2.638408" if="$(eval route=='route3')" />
   <arg name="goal_z" default="0.373011" if="$(eval route=='route3')" />
   <!-- Route 3 GPS Goal Location -->
-  <arg name="latitude" default="49.89995491965573" if="$(eval route=='route3')" />
-  <arg name="longitude" default="8.900036272980314" if="$(eval route=='route3')" />
-  <!-- Route 3 GPS Start Location -->
-  <arg name="start_latitude" default="49.900058712424624" if="$(eval route=='route3')" />
-  <arg name="start_longitude" default="8.900071621874774" if="$(eval route=='route3')" />
+  <arg name="latitude" default="49.89995559769814" if="$(eval route=='route3')" />
+  <arg name="longitude" default="8.90003685357497" if="$(eval route=='route3')" />
+
+  <!-- GPS reference origin -->
+  <arg name="origin_latitude" default="49.90000010022057" />
+  <arg name="origin_longitude" default="8.900000304717647" />
 
 
-  <!-- Gazebo World file to load -->
+  <!-- Gazebo world file to load -->
   <arg name="world_name" default="$(find parc_robot)/worlds/parc_task1.world" />
 
   <!-- ========================= Robot Model ========================= -->
@@ -79,7 +73,7 @@
 
   <rosparam command="load" file="$(find parc_robot)/config/control.yaml"/>
 
-  <!-- Spawn Robot model in Gazebo -->   
+  <!-- Spawn robot model in Gazebo -->   
   <node name="spawn_robot_model" pkg="gazebo_ros" type="spawn_model" args="-x $(arg x)
                 -y $(arg y)
                 -z $(arg z)
@@ -89,20 +83,20 @@
                 -param robot_description
                 -model 'robot'" />
 
-  <!-- Show Goal Location in Gazebo -->
+  <!-- Show goal location in Gazebo -->
   <node name="spawn_goal_location" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-file $(find parc_robot)/models/goal_location/model.sdf -sdf 
                 -model goal_location
                 -x $(arg goal_x)
                 -y $(arg goal_y)
                 -z $(arg goal_z)" />
 
-  <!-- GPS Coordinate of Goal Location -->
+  <!-- Load GPS coordinate of the goal and the origin as parameters -->
   <param name="goal_latitude" type="double" value="$(arg latitude)" />
   <param name="goal_longitude" type="double" value="$(arg longitude)" />
-  <param name="start_latitude" type="double" value="$(arg start_latitude)" />
-  <param name="start_longitude" type="double" value="$(arg start_longitude)" />
+  <param name="origin_latitude" type="double" value="$(arg origin_latitude)" />
+  <param name="origin_longitude" type="double" value="$(arg origin_longitude)" />
 
-  <!-- GPS Coordinate of Pegs -->
+  <!-- Load GPS coordinate of the pegs as parameters -->
   <rosparam file="$(find parc_robot)/config/peg_coordinates.yaml" command="load" />
 
   <!-- ========================= Vizualize ========================= -->
