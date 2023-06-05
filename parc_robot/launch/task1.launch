@@ -12,7 +12,7 @@
   <!-- Route 1 Goal Location -->
   <arg name="goal_x" default="-4.943511" if="$(eval route=='route1')" />
   <arg name="goal_y" default="-5.622047" if="$(eval route=='route1')" />
-  <arg name="goal_z" default="0.373011" if="$(eval route=='route1')" />
+  <arg name="goal_z" default="0.02" if="$(eval route=='route1')" />
   <!-- Route 1 GPS Goal Location -->
   <arg name="latitude" default="49.89995550730833" if="$(eval route=='route1')" />
   <arg name="longitude" default="8.900078504470644  " if="$(eval route=='route1')" />
@@ -25,7 +25,7 @@
   <!-- Route 2 Goal Location -->
   <arg name="goal_x" default="6.479509" if="$(eval route=='route2')" />
   <arg name="goal_y" default="-2.120167" if="$(eval route=='route2')" />
-  <arg name="goal_z" default="0.373011" if="$(eval route=='route2')" />
+  <arg name="goal_z" default="0.02" if="$(eval route=='route2')" />
   <!-- Route 2 GPS Goal Location -->
   <arg name="latitude" default="49.90005835290429" if="$(eval route=='route2')" />
   <arg name="longitude" default="8.900029311807417" if="$(eval route=='route2')" />
@@ -39,7 +39,7 @@
   <!-- Route 3 Goal Location -->
   <arg name="goal_x" default="-4.943510" if="$(eval route=='route3')" />
   <arg name="goal_y" default="-2.638408" if="$(eval route=='route3')" />
-  <arg name="goal_z" default="0.373011" if="$(eval route=='route3')" />
+  <arg name="goal_z" default="0.02" if="$(eval route=='route3')" />
   <!-- Route 3 GPS Goal Location -->
   <arg name="latitude" default="49.89995559769814" if="$(eval route=='route3')" />
   <arg name="longitude" default="8.90003685357497" if="$(eval route=='route3')" />
