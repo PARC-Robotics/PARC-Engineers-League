@@ -24,6 +24,13 @@
     <arg name="z" value="0.538968" if="$(eval route=='route3')" />
     <arg name="yaw" value="0" if="$(eval route=='route3')" />
 
+    <!-- GPS reference origin -->
+    <arg name="origin_latitude" default="49.90000010022057" />
+    <arg name="origin_longitude" default="8.900000304717647" />
+    <!-- Load GPS coordinate of the origin as parameters -->
+    <param name="origin_latitude" type="double" value="$(arg origin_latitude)" />
+    <param name="origin_longitude" type="double" value="$(arg origin_longitude)" />
+
     <!-- Gazebo World file to load -->
     <arg name="world_name" default="$(find parc_robot)/worlds/parc_task2.world" />
 
