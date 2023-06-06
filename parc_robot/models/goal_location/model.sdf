@@ -24,9 +24,10 @@
       <visual name='visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <sphere>
+          <cylinder>
             <radius>0.6</radius>
-          </sphere>
+            <length>0.025</length>
+          </cylinder>
         </geometry>
         <material>
           <lighting>1</lighting>
