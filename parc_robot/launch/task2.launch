@@ -31,6 +31,9 @@
     <param name="origin_latitude" type="double" value="$(arg origin_latitude)" />
     <param name="origin_longitude" type="double" value="$(arg origin_longitude)" />
 
+    <!-- Place the robot start oritentation on the parameter server -->
+    <param name="start_yaw" type="double" value="$(arg yaw)" />
+
     <!-- Gazebo World file to load -->
     <arg name="world_name" default="$(find parc_robot)/worlds/parc_task2.world" />
 

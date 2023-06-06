@@ -388,42 +388,42 @@
     </include>
 
     <include>
-      <uri>model://barn</uri>
+      <uri>model://barn_collision</uri>
       <pose>-19 -2 0.3 0 0 0</pose>
       <name>barn_00</name>
       <static>true</static>
     </include>
 
     <include>
-      <uri>model://barn</uri>
+      <uri>model://barn_collision</uri>
       <pose>-19 20 0.3 0 0 3.1427</pose>
       <name>barn_01</name>
       <static>true</static>
     </include>
 
     <include>
-      <uri>model://barn</uri>
+      <uri>model://barn_collision</uri>
       <pose>-40 20 0.3 0 0 3.1427</pose>
       <name>barn_02</name>
       <static>true</static>
     </include>
 
     <include>
-      <uri>model://barn</uri>
+      <uri>model://barn_collision</uri>
       <pose>2 20 0.3 0 0 3.1427</pose>
       <name>barn_03</name>
       <static>true</static>
     </include>
 
     <include>
-      <uri>model://barn</uri>
+      <uri>model://barn_collision</uri>
       <pose>-40 -10 0.3 0 0 1.571428571</pose>
       <name>barn_04</name>
       <static>true</static>
     </include>
 
     <include>
-      <uri>model://barn</uri>
+      <uri>model://barn_collision</uri>
       <pose>-40 -31 0.3 0 0 1.571428571</pose>
       <name>barn_05</name>
       <static>true</static>
